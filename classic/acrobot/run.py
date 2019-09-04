@@ -1,12 +1,12 @@
 import numpy as np
 import gym
-from cartpole.agent import CartPoleAgent
+from classic.acrobot import AcrobotAgent
 
-def cartpole():
-    env = gym.make("CartPole-v0")
+def acrobot():
+    env = gym.make("Acrobot-v1")
     observation_space = env.observation_space.shape[0]
     action_space = env.action_space.n
-    agent = CartPoleAgent(observation_space, action_space)
+    agent = AcrobotAgent(observation_space, action_space)
     run = 0
     while True:
         run += 1
@@ -29,4 +29,4 @@ def cartpole():
 
 
 if __name__ == "__main__":
-    cartpole()
+    acrobot()
